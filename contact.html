@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact &amp; Apply | Ready2Perform, Benoit Foucher</title>
-<meta name="description" content="Apply to coach with Benoit Foucher, or get free ebooks and webinars. Tell me about your game and what you want to improve." />
+<title>Book a Free Call | Ready2Perform, Benoit Foucher</title>
+<meta name="description" content="Book a free call with ATP coach Benoit Foucher. Bring a short video of your game and we'll look at it together, and see how to take your practice level into matches." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css?v=10" />
+<script type="text/javascript" async src="https://static.zcal.co/embed/v1/embed.js"></script>
 </head>
 <body>
 
@@ -30,65 +31,26 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap measure center">
-    <p class="eyebrow">Contact &amp; apply</p>
-    <h1>Tell me about your game.</h1>
-    <p class="lead">To protect coaching quality, I work with a limited number of players at a time. Share where you're at and what you want to improve, and I'll read every application personally.</p>
+    <p class="eyebrow">Book a free call</p>
+    <h1>Let's talk about your game.</h1>
+    <p class="lead">Pick a time below and we'll talk about where your game is and where you want it to go. If you have a short video of yourself playing, bring it and we'll watch it together on the call. No pressure, just a real conversation.</p>
   </div>
 </section>
 
-<!-- FORM -->
-<section class="section" style="padding-top:clamp(20px,4vw,40px)">
-  <div class="wrap contact-grid">
-    <form id="applyForm" novalidate>
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your name" required />
-      </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@email.com" required />
-      </div>
-      <div class="field">
-        <label for="level">Your level / language</label>
-        <select id="level" name="level">
-          <option>Amateur / club player</option>
-          <option>Competitive amateur (35+)</option>
-          <option>Competitive junior</option>
-          <option>Professional / aspiring pro</option>
-          <option>Prefer coaching in French</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="game">Tell me about your game</label>
-        <textarea id="game" name="game" placeholder="How long you've played, how often, how your game feels right now…"></textarea>
-      </div>
-      <div class="field">
-        <label for="improve">What do you want to improve most?</label>
-        <textarea id="improve" name="improve" placeholder="The one thing that, if it changed, would make the biggest difference…"></textarea>
-      </div>
-      <button type="submit" class="btn">Send my application</button>
-      <p style="margin-top:1.2rem;font-size:.92rem;color:var(--muted)">Or email me directly at <a href="mailto:benoit@ready2perform.com" class="tlink">benoit@ready2perform.com</a></p>
-    </form>
+<!-- CALENDAR (Zcal embed) -->
+<section class="section" id="book" style="padding-top:clamp(16px,3vw,32px)">
+  <div class="wrap" style="max-width:900px;margin:0 auto">
+    <div class="zcal-inline-widget" style="min-height:640px"><a href="https://zcal.co/i/z8MSefE6">Tennis Video Coaching Meeting - Schedule a meeting</a></div>
+  </div>
+</section>
 
-    <aside class="aside">
-      <div class="block">
-        <h3>Prefer to start free?</h3>
-        <p>Get a real taste of the approach first: free ebooks, live webinars, and weekly videos.</p>
-        <p style="margin-top:.8rem"><a href="https://www.youtube.com/@benoitfoucher-ready2perform" target="_blank" rel="noopener" class="tlink">Watch on YouTube</a></p>
-      </div>
-      <div class="block">
-        <h3>When does coaching start?</h3>
-        <p>Whenever we agree and you're ready.</p>
-      </div>
-      <div class="block">
-        <h3>Can I pay in installments?</h3>
-        <p>Yes. Three payments of €650.</p>
-      </div>
-      <div>
-        <h3>Is improvement guaranteed?</h3>
-        <p>It's tied to your commitment. Show up, and the work pays off. Injured? We postpone the start.</p>
-      </div>
-    </aside>
+<!-- GOOD TO KNOW -->
+<section class="section" style="background:var(--soft)">
+  <div class="wrap measure prose reveal">
+    <p class="eyebrow">What to expect</p>
+    <h2>A real conversation, not a sales pitch.</h2>
+    <p style="margin-top:1.4rem">On the call we look at where your game is and where you want it to go, and watch your video together if you have one. If it feels like the right fit, I'll show you how the coaching works. If not, you'll still walk away with something useful.</p>
+    <p>Prefer to get a feel first? My free ebooks and weekly videos on YouTube are a good place to start. And if you'd rather reach me directly, I'm at <a href="mailto:benoit@ready2perform.com" class="tlink">benoit@ready2perform.com</a>.</p>
   </div>
 </section>
 
@@ -115,15 +77,6 @@
   burger.addEventListener('click', () => nav.classList.toggle('open'));
   const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // DEMO ONLY. Wire to Systeme.io (form embed / API) for the live site.
-  document.getElementById('applyForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    this.innerHTML = '<h3>Thank you' + (name ? ', ' + name : '') + '.</h3>' +
-      '<p style="margin-top:.6rem;color:#444">Your application is in. I read every one personally and will reply soon with the next step.</p>' +
-      '<p style="margin-top:1rem;font-size:.9rem;color:var(--muted)">(Demo form. On the live site this submits straight into Systeme.io.)</p>';
-  });
 </script>
 </body>
 </html>

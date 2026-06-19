@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact &amp; Candidater | Ready2Perform, Benoit Foucher</title>
-<meta name="description" content="Candidate au coaching avec Benoit Foucher, ou récupère les ebooks et webinaires gratuits. Parle-moi de ton jeu et de ce que tu veux améliorer." />
+<title>Réserver un appel gratuit | Ready2Perform, Benoit Foucher</title>
+<meta name="description" content="Réserve un appel gratuit avec le coach ATP Benoit Foucher. Apporte une courte vidéo de ton jeu et on la regardera ensemble pour voir comment porter ton niveau d'entraînement jusqu'en match." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css?v=10" />
+<script type="text/javascript" async src="https://static.zcal.co/embed/v1/embed.js"></script>
 </head>
 <body>
 
@@ -30,65 +31,26 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap measure center">
-    <p class="eyebrow">Contact &amp; candidature</p>
-    <h1>Parle-moi de ton jeu.</h1>
-    <p class="lead">Pour préserver la qualité du coaching, je travaille avec un nombre limité de joueurs à la fois. Dis-moi où tu en es et ce que tu veux améliorer, et je lis chaque candidature personnellement.</p>
+    <p class="eyebrow">Réserver un appel gratuit</p>
+    <h1>Parlons de ton jeu.</h1>
+    <p class="lead">Choisis un créneau ci-dessous et on parlera de là où en est ton jeu et de là où tu veux aller. Si tu as une courte vidéo de toi en train de jouer, apporte-la et on la regardera ensemble pendant l'appel. Sans pression, juste une vraie conversation.</p>
   </div>
 </section>
 
-<!-- FORMULAIRE -->
-<section class="section" style="padding-top:clamp(20px,4vw,40px)">
-  <div class="wrap contact-grid">
-    <form id="applyForm" novalidate>
-      <div class="field">
-        <label for="name">Nom</label>
-        <input id="name" name="name" type="text" placeholder="Ton nom" required />
-      </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="toi@email.com" required />
-      </div>
-      <div class="field">
-        <label for="level">Ton niveau / langue</label>
-        <select id="level" name="level">
-          <option>Amateur / joueur de club</option>
-          <option>Amateur compétiteur (35+)</option>
-          <option>Junior compétiteur</option>
-          <option>Professionnel / aspirant pro</option>
-          <option>Je préfère un coaching en anglais</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="game">Parle-moi de ton jeu</label>
-        <textarea id="game" name="game" placeholder="Depuis combien de temps tu joues, à quelle fréquence, comment ton jeu se ressent aujourd'hui…"></textarea>
-      </div>
-      <div class="field">
-        <label for="improve">Qu'est-ce que tu veux le plus améliorer ?</label>
-        <textarea id="improve" name="improve" placeholder="La chose qui, si elle changeait, ferait la plus grande différence…"></textarea>
-      </div>
-      <button type="submit" class="btn">Envoyer ma candidature</button>
-      <p style="margin-top:1.2rem;font-size:.92rem;color:var(--muted)">Ou écris-moi directement à <a href="mailto:benoit@ready2perform.com" class="tlink">benoit@ready2perform.com</a></p>
-    </form>
+<!-- CALENDRIER (intégration Zcal) -->
+<section class="section" id="book" style="padding-top:clamp(16px,3vw,32px)">
+  <div class="wrap" style="max-width:900px;margin:0 auto">
+    <div class="zcal-inline-widget" style="min-height:640px"><a href="https://zcal.co/i/z8MSefE6">Tennis Video Coaching Meeting - Schedule a meeting</a></div>
+  </div>
+</section>
 
-    <aside class="aside">
-      <div class="block">
-        <h3>Envie de commencer gratuitement ?</h3>
-        <p>Découvre l'approche d'abord : ebooks gratuits, webinaires en direct et vidéos chaque semaine.</p>
-        <p style="margin-top:.8rem"><a href="https://www.youtube.com/@benoitfoucher-ready2perform" target="_blank" rel="noopener" class="tlink">Voir sur YouTube</a></p>
-      </div>
-      <div class="block">
-        <h3>Quand commence le coaching ?</h3>
-        <p>Quand on est d'accord et que tu es prêt.</p>
-      </div>
-      <div class="block">
-        <h3>Puis-je payer en plusieurs fois ?</h3>
-        <p>Oui. Trois paiements de 650 €.</p>
-      </div>
-      <div>
-        <h3>La progression est-elle garantie ?</h3>
-        <p>Elle dépend de ton engagement. Sois présent, et le travail paie. Blessé ? On reporte le début.</p>
-      </div>
-    </aside>
+<!-- BON À SAVOIR -->
+<section class="section" style="background:var(--soft)">
+  <div class="wrap measure prose reveal">
+    <p class="eyebrow">À quoi t'attendre</p>
+    <h2>Une vraie conversation, pas un argumentaire de vente.</h2>
+    <p style="margin-top:1.4rem">Pendant l'appel, on regarde où en est ton jeu et où tu veux aller, et on regarde ta vidéo ensemble si tu en as une. Si on sent que c'est le bon match, je t'explique comment fonctionne le coaching. Sinon, tu repartiras quand même avec quelque chose d'utile.</p>
+    <p>Envie de te faire une idée d'abord ? Mes ebooks gratuits et mes vidéos hebdomadaires sur YouTube sont un bon point de départ. Et si tu préfères me joindre directement, je suis à <a href="mailto:benoit@ready2perform.com" class="tlink">benoit@ready2perform.com</a>.</p>
   </div>
 </section>
 
@@ -115,15 +77,6 @@
   burger.addEventListener('click', () => nav.classList.toggle('open'));
   const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // DÉMO uniquement. À connecter à Systeme.io (formulaire / API) pour le site en ligne.
-  document.getElementById('applyForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    this.innerHTML = '<h3>Merci' + (name ? ', ' + name : '') + '.</h3>' +
-      '<p style="margin-top:.6rem;color:#444">Ta candidature est bien reçue. Je lis chacune personnellement et je te répondrai vite avec la prochaine étape.</p>' +
-      '<p style="margin-top:1rem;font-size:.9rem;color:var(--muted)">(Formulaire de démo. Sur le site en ligne, ceci s\'enregistre directement dans Systeme.io.)</p>';
-  });
 </script>
 </body>
 </html>
