@@ -1,0 +1,5 @@
+# Keep Benoit's existing Systeme.io ebook funnels working after the domain moves to Netlify.
+# These forward the old ready2perform.com paths to the Systeme.io-hosted versions.
+# 302 = temporary, since we plan to rebuild these into the site later.
+/tontennisnaturel     https://12-benoit.systeme.io/tontennisnaturel     302
+/yournaturaltennis    https://12-benoit.systeme.io/yournaturaltennis    302
