@@ -1,5 +1,12 @@
-# Keep Benoit's existing Systeme.io ebook funnels working after the domain moves to Netlify.
-# These forward the old ready2perform.com paths to the Systeme.io-hosted versions.
-# 302 = temporary, since we plan to rebuild these into the site later.
+# Keep Benoit's existing Systeme.io pages working now that the domain points to Netlify.
+# The new site's own pages (/, /about.html, /contact.html, /fr/*, /css/*, /images/*)
+# are real files and are served normally; these rules only catch paths the site does NOT have.
+
+# Explicit ebook funnels (kept for clarity):
 /tontennisnaturel     https://12-benoit.systeme.io/tontennisnaturel     302
 /yournaturaltennis    https://12-benoit.systeme.io/yournaturaltennis    302
+
+# Safety net: any other old ready2perform.com path (course logins, members' personal
+# access links, other funnels/opt-ins) forwards to the same path on Systeme.io,
+# so existing links keep working. Query strings/tokens are preserved automatically.
+/*    https://12-benoit.systeme.io/:splat    302
