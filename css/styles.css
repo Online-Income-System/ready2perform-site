@@ -342,13 +342,13 @@ em { font-style: italic; }
   position: absolute; top: 13%; left: 0;
   width: clamp(40px, 4.8vw, 64px); aspect-ratio: 1;
   will-change: transform;
-  animation: ball-x 1.85s cubic-bezier(.32,.42,.62,1) .35s both;
+  animation: ball-x 1.85s cubic-bezier(.32,.42,.62,1) 1.0s both;
 }
 .ball-arc { display: block; width: 100%; height: 100%; will-change: transform;
-  animation: ball-arc 1.85s linear .35s both; }
+  animation: ball-arc 1.85s linear 1.0s both; }
 .ball-spin { display: block; width: 100%; height: 100%;
   filter: drop-shadow(0 9px 16px rgba(15,28,46,.22));
-  animation: ball-spin 1.85s cubic-bezier(.32,.42,.62,1) .35s both; }
+  animation: ball-spin 1.85s cubic-bezier(.32,.42,.62,1) 1.0s both; }
 
 @keyframes ball-x   { from { transform: translateX(-14vw); }
                       to   { transform: translateX(112vw); } }
@@ -374,5 +374,34 @@ em { font-style: italic; }
   .ball-flight { display: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
+}
+
+/* ---------- hero: staggered entrance ----------
+   Each element rises and fades in turn, so the eye is led down to the button
+   instead of meeting the whole block at once. */
+.hero .eyebrow,
+.hero h1,
+.hero .lead,
+.hero .cta-row { animation: hero-in .9s var(--ease) both; }
+.hero .eyebrow  { animation-delay: .15s; }
+.hero h1        { animation-delay: .32s; }
+.hero .lead     { animation-delay: .58s; }
+.hero .cta-row  { animation-delay: .78s; }
+
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* the accent phrase swells once, after the headline has landed */
+.hero h1 em {
+  display: inline-block;
+  margin: 0 .05em;                     /* room so the swell doesn't touch its neighbours */
+  animation: word-swell .95s cubic-bezier(.34,1.32,.5,1) 1.15s both;
+}
+@keyframes word-swell {
+  0%   { transform: scale(1); }
+  38%  { transform: scale(1.085); }
+  100% { transform: scale(1); }
 }
