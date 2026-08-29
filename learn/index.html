@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Learn | Ready2Perform, Benoit Foucher</title>
+<link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+<meta name="description" content="Articles and videos from ATP coach Benoit Foucher on natural technique, playing calm under pressure, and training for tennis that lasts." />
+<link rel="canonical" href="https://www.ready2perform.com/learn" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css?v=13" />
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="../index.html" class="brand"><img src="../images/logo.svg" alt="Ready2Perform" style="height:46px;width:auto;display:block" /></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="index.html" aria-current="page">Learn</a></li>
+        <li><a href="../yournaturaltennis.html">Book</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <span class="lang"><a class="on">EN</a><span class="sep">/</span><a href="../fr/apprendre/index.html">FR</a></span>
+      <button class="burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="learn-hero">
+  <div class="wrap measure">
+    <p class="eyebrow">Learn</p>
+    <h1>The ideas behind the coaching.</h1>
+    <p class="lead">Everything here comes from working with players on the professional tour and with committed amateurs online. Read it, watch it, or both. Take what serves you.</p>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="section" style="padding-top:clamp(20px,3vw,40px)">
+  <div class="wrap">
+
+    <div class="measure reveal" style="margin-bottom:2.4rem">
+      <p class="eyebrow">Latest</p>
+    </div>
+
+    <a href="tennis-fitness-40-plus.html" class="article-card reveal">
+      <img class="thumb" src="https://i.ytimg.com/vi/QhrqlQ1_9w4/maxresdefault.jpg" alt="Benoit Foucher on the foundations of tennis fitness for players over 40" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/QhrqlQ1_9w4/hqdefault.jpg'" loading="lazy" />
+      <div class="card-body">
+        <p class="article-meta">Fitness &amp; Longevity · 8 min read</p>
+        <h3>The foundations of tennis fitness after 40</h3>
+        <p>Most players over forty are training in the wrong order. Mobility before strength, strength before endurance, and recovery running underneath all of it. Here is the order, and the categories of work inside it.</p>
+        <span class="more">Read the article</span>
+      </div>
+    </a>
+
+    <div class="measure reveal" style="margin-top:3.4rem">
+      <p style="color:var(--muted);font-size:.98rem">More articles are on the way, built from the questions players ask most: why your practice level disappears in matches, what to do when your self-talk turns on you, and how to find the technique your own body actually wants.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="section closing">
+  <div class="wrap measure center reveal">
+    <p class="eyebrow">Start here</p>
+    <h2>Reading is a good start. <em>Playing</em> is better.</h2>
+    <p>Your Natural Tennis lays out the whole approach in one short book: why you have plateaued, and how to build a game around your body instead of someone else's. It is free.</p>
+    <div class="cta-row center">
+      <a href="../yournaturaltennis.html" class="btn btn-light">Get the free ebook</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <a href="../index.html" class="brand"><img src="../images/logo.svg" alt="Ready2Perform" style="height:46px;width:auto;display:block" /></a>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="index.html">Learn</a></li>
+        <li><a href="../yournaturaltennis.html">Book</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="https://www.youtube.com/@benoitfoucher-ready2perform" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+    <div class="copy">
+      <span>© 2026 Ready2Perform · Benoit Foucher</span>
+      <span>Natural movement. Real victory.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav'), burger = document.getElementById('burger');
+  burger.addEventListener('click', () => nav.classList.toggle('open'));
+  const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
