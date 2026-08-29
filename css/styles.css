@@ -539,9 +539,11 @@ em { font-style: italic; }
 .band.pos-bottom > img { object-position: center 78%; }
 .band.tall { height: clamp(380px, 76vh, 760px); }
 .band.short { height: clamp(260px, 44vh, 460px); }
+/* nearly-square photos need a much taller band or the crop zooms in hard */
+.band.roomy { height: clamp(420px, 88vh, 1000px); }
 
 @media (max-width: 700px) {
-  .band { height: clamp(300px, 52vh, 440px); }
+  .band, .band.roomy { height: clamp(300px, 52vh, 440px); }
   .band.tall { height: clamp(340px, 62vh, 520px); }
 }
 
@@ -556,7 +558,17 @@ em { font-style: italic; }
 @media (max-width: 760px) { .photo-pair { grid-template-columns: 1fr; gap: 1.8rem; } }
 .band.pos-mid > img { object-position: center 55%; }
 .band.pos-seat > img { object-position: center 66%; }
-/* keep Benoit in frame when a wide photo is cropped hard on phones */
+/* Wide (16:9) photos get crushed by a tall band on phones. `m-stack` drops the
+   fixed height, shows the whole frame, and moves the line underneath it. */
 @media (max-width: 760px) {
-  .band.m-left > img { object-position: 17% center; }
+  .band.m-stack { height: auto; background: transparent; }
+  .band.m-stack > img { height: auto; aspect-ratio: 16 / 9; object-position: center; }
+  .band.m-stack .band-text {
+    position: static;
+    background: var(--ink);
+    padding: clamp(24px, 6vw, 34px) clamp(22px, 6vw, 40px) clamp(26px, 7vw, 38px);
+  }
+  .band.m-stack .band-text p.line { max-width: none; text-shadow: none; }
 }
+.photo-pair.ratio-43 img { aspect-ratio: 4 / 3; }
+.photo-pair-label { margin-bottom: 1.4rem; }
