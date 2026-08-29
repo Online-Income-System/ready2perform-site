@@ -1,0 +1,39 @@
+# Ready2Perform — Benoit Foucher
+# Allow all reputable crawlers full access. The sitemap below tells them what to index.
+
+User-agent: *
+Allow: /
+
+# Major AI / LLM crawlers — explicitly allowed so this content can be cited by
+# AI assistants (GEO). Block specific paths here later if anything needs excluding.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://www.ready2perform.com/sitemap.xml

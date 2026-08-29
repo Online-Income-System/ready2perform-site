@@ -1,0 +1,52 @@
+# Ready2Perform
+
+> Online tennis coaching from ATP coach Benoit Foucher. Helping committed amateur players build a game around the way their own body actually moves, instead of forcing a copied model, so their practice level survives real matches.
+
+Ready2Perform is the coaching practice of Benoit Foucher, a former ATP-level player and the foundational coach behind Arthur Fery, Wimbledon semi-finalist 2026. He has worked on the professional tour since 2017 and coaches committed amateur players online, with a particular focus on players aged 40 and over. The method is individual rather than model-based: instead of teaching one correct technique, it starts from how a specific body is wired to move and builds efficient, repeatable shots around that, then trains relaxation under pressure and a simple match plan.
+
+The site is bilingual. English pages sit at the root, French pages under /fr/.
+
+## Core pages
+
+- [Home](https://www.ready2perform.com/): The philosophy in short — there is no right way to play tennis, only your way — plus who Benoit is and how the coaching works.
+- [About](https://www.ready2perform.com/about): Benoit Foucher's background. Former ATP-level player, runner-up at the World Championship +35 (2017), foundational coach to Arthur Fery. Trained in movement profiling, StrongFirst Elite instructor, NLP practitioner, certified yoga teacher.
+- [Learn](https://www.ready2perform.com/learn): Articles and videos on natural technique, playing calm under pressure, and training for tennis that lasts.
+- [Your Natural Tennis (free book)](https://www.ready2perform.com/yournaturaltennis): The free ebook that lays out the whole approach — why players plateau and how to build a game around their own body.
+- [Contact](https://www.ready2perform.com/contact): Book a free call about online coaching.
+
+## French equivalents
+
+- [Accueil](https://www.ready2perform.com/fr/)
+- [À propos](https://www.ready2perform.com/fr/about)
+- [Apprendre](https://www.ready2perform.com/fr/apprendre)
+- [Ton Tennis Naturel (livre gratuit)](https://www.ready2perform.com/tontennisnaturel)
+- [Contact](https://www.ready2perform.com/fr/contact)
+
+## Articles
+
+- [Tennis Fitness After 40: Seven Principles, Not a Copied Programme](https://www.ready2perform.com/learn/tennis-fitness-40-plus): Benoit Foucher's seven categories for organising physical training for tennis players over forty, taught as principles rather than a fixed programme so each player can select their own exercises. Covers injury prevention first (releasing tension at your mobile point, daily range-of-motion work), single-leg lower-body strength and why tennis transfers from one-legged work, deceleration and the concept of "leakage", anti-rotation core work, plyometrics and minimising ground contact, endurance built from one weekly zone-two session plus optional intervals at ten seconds on and fifty seconds off, and optional upper-body and grip work. French version at /fr/apprendre/fitness-tennis-40-ans.
+
+## Topics covered
+
+- Natural tennis technique built from individual movement preferences rather than a copied model
+- Why amateur players play worse in matches than in practice, and how to close that gap
+- Relaxation and breathing trained deliberately so calm survives a tight scoreline
+- Match strategy and simple game plans that hold under pressure
+- Self-talk in tennis and the levels it moves through under stress
+- Tennis fitness for players 40 and over — injury prevention, single-leg strength, deceleration, core, plyometrics and endurance
+- Injury prevention and longevity for adult competitive players
+- Recovery as a trainable skill: load waving, the parasympathetic switch, heart-rate variability
+- Endurance for intermittent sport, and why generic running fitness does not transfer to court fitness
+- Serve, volley, footwork and equipment choice matched to the individual player
+- Confidence and mindset, drawn from Benoit's book Ta Réelle Victoire (Your Real Victory)
+
+## Books by Benoit Foucher
+
+- Your Natural Tennis / Ton Tennis Naturel — free ebook, the foundation of the method
+- Ta Réelle Victoire — on confidence, mindset and what victory actually means
+- The Confidence Journey
+
+## Optional
+
+- [Sitemap](https://www.ready2perform.com/sitemap.xml)
+- [YouTube channel](https://www.youtube.com/@benoitfoucher-ready2perform)
