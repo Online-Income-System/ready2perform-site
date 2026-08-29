@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css?v=13" />
+<link rel="stylesheet" href="../css/styles.css?v=14" />
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Tennis Fitness After 40: Seven Principles, Not a Copied Programme","description":"Should you run three times a week? Lift? Do intervals? ATP coach Benoit Foucher gives the seven principles that organise tennis fitness after 40, so you can choose your own exercises instead of copying someone else's programme.","image":"https://i.ytimg.com/vi/QhrqlQ1_9w4/maxresdefault.jpg","datePublished":"2026-08-29","dateModified":"2026-08-29","inLanguage":"en-GB","author":{"@type":"Person","name":"Benoit Foucher","url":"https://www.ready2perform.com/about","image":"https://www.ready2perform.com/images/benoit-portrait.jpg"},"publisher":{"@type":"Organization","name":"Ready2Perform","logo":{"@type":"ImageObject","url":"https://www.ready2perform.com/images/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.ready2perform.com/learn/tennis-fitness-40-plus"},"articleSection":"Fitness & Longevity","keywords":"tennis fitness over 40, tennis training after 40, tennis mobility, single-leg strength, deceleration, plyometrics, tennis injury prevention"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"The Foundations of Tennis Fitness for Players 40+: Principles and Exercises Categories","description":"Should you run three times a week? Lift? Do intervals? ATP coach Benoit Foucher gives the seven principles that organise tennis fitness after 40, so you can choose your own exercises instead of copying someone else's programme.","thumbnailUrl":"https://i.ytimg.com/vi/QhrqlQ1_9w4/maxresdefault.jpg","uploadDate":"2026-08-06","embedUrl":"https://www.youtube.com/embed/QhrqlQ1_9w4","contentUrl":"https://www.youtube.com/watch?v=QhrqlQ1_9w4","publisher":{"@type":"Organization","name":"Ready2Perform","logo":{"@type":"ImageObject","url":"https://www.ready2perform.com/images/logo.png"}}}</script>
@@ -72,8 +72,13 @@
 <!-- VIDEO -->
 <section style="padding-bottom:clamp(20px,3vw,36px)">
   <div class="wrap measure">
-    <div class="video-embed">
-      <iframe src="https://www.youtube-nocookie.com/embed/QhrqlQ1_9w4" title="The Foundations of Tennis Fitness for Players 40+: Principles and Exercises Categories" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    <div class="video-embed" data-video="QhrqlQ1_9w4" data-title="The Foundations of Tennis Fitness for Players 40+">
+      <button class="video-play" type="button" aria-label="Play the video: The Foundations of Tennis Fitness for Players 40 plus">
+        <img src="https://i.ytimg.com/vi/QhrqlQ1_9w4/maxresdefault.jpg" alt="Benoit Foucher demonstrating tennis fitness exercises for players over 40" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/QhrqlQ1_9w4/hqdefault.jpg'" loading="lazy" referrerpolicy="no-referrer" />
+        <span class="scrim"></span>
+        <span class="pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="label">Watch</span>
+      </button>
     </div>
     <p class="video-note">Prefer to watch? The full version, with every exercise demonstrated, is on <a href="https://www.youtube.com/watch?v=QhrqlQ1_9w4" target="_blank" rel="noopener" class="tlink">YouTube</a>. Otherwise, read on.</p>
   </div>
@@ -257,6 +262,20 @@
   burger.addEventListener('click', () => nav.classList.toggle('open'));
   const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Click-to-play: swap the poster for the YouTube iframe only when asked.
+  document.querySelectorAll('.video-embed .video-play').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const box = btn.closest('.video-embed');
+      const id = box.dataset.video;
+      const frame = document.createElement('iframe');
+      frame.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      frame.title = box.dataset.title || 'Video';
+      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      frame.allowFullscreen = true;
+      box.replaceChildren(frame);
+    });
+  });
 </script>
 </body>
 </html>

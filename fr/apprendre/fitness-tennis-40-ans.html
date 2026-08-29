@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../css/styles.css?v=13" />
+<link rel="stylesheet" href="../../css/styles.css?v=14" />
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Préparation physique au tennis après 40 ans : sept principes, pas un programme copié","description":"Faut-il courir trois fois par semaine ? Faire du fractionné ? De la musculation ? Le coach ATP Benoit Foucher donne les sept principes qui organisent la préparation physique après 40 ans, pour que tu choisisses tes propres exercices.","image":"https://i.ytimg.com/vi/QhrqlQ1_9w4/maxresdefault.jpg","datePublished":"2026-08-29","dateModified":"2026-08-29","inLanguage":"fr-FR","author":{"@type":"Person","name":"Benoit Foucher","url":"https://www.ready2perform.com/about","image":"https://www.ready2perform.com/images/benoit-portrait.jpg"},"publisher":{"@type":"Organization","name":"Ready2Perform","logo":{"@type":"ImageObject","url":"https://www.ready2perform.com/images/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.ready2perform.com/fr/apprendre/fitness-tennis-40-ans"},"articleSection":"Physique & Longévité","keywords":"tennis fitness over 40, tennis training after 40, tennis mobility, single-leg strength, deceleration, plyometrics, tennis injury prevention"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"Les fondations de la préparation physique au tennis pour les joueurs 40+","description":"Faut-il courir trois fois par semaine ? Faire du fractionné ? De la musculation ? Le coach ATP Benoit Foucher donne les sept principes qui organisent la préparation physique après 40 ans, pour que tu choisisses tes propres exercices.","thumbnailUrl":"https://i.ytimg.com/vi/QhrqlQ1_9w4/maxresdefault.jpg","uploadDate":"2026-08-06","embedUrl":"https://www.youtube.com/embed/QhrqlQ1_9w4","contentUrl":"https://www.youtube.com/watch?v=QhrqlQ1_9w4","publisher":{"@type":"Organization","name":"Ready2Perform","logo":{"@type":"ImageObject","url":"https://www.ready2perform.com/images/logo.png"}}}</script>
@@ -72,8 +72,13 @@
 <!-- VIDÉO -->
 <section style="padding-bottom:clamp(20px,3vw,36px)">
   <div class="wrap measure">
-    <div class="video-embed">
-      <iframe src="https://www.youtube-nocookie.com/embed/QhrqlQ1_9w4" title="Les fondations de la préparation physique au tennis pour les joueurs 40+" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    <div class="video-embed" data-video="QhrqlQ1_9w4" data-title="Les fondations de la préparation physique au tennis pour les joueurs 40+">
+      <button class="video-play" type="button" aria-label="Lire la vidéo : les fondations de la préparation physique au tennis après 40 ans">
+        <img src="https://i.ytimg.com/vi/QhrqlQ1_9w4/maxresdefault.jpg" alt="Benoit Foucher démontrant des exercices de préparation physique pour les joueurs de plus de 40 ans" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/QhrqlQ1_9w4/hqdefault.jpg'" loading="lazy" referrerpolicy="no-referrer" />
+        <span class="scrim"></span>
+        <span class="pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="label">Regarder</span>
+      </button>
     </div>
     <p class="video-note">Tu préfères regarder ? La version complète, avec chaque exercice démontré, est sur <a href="https://www.youtube.com/watch?v=QhrqlQ1_9w4" target="_blank" rel="noopener" class="tlink">YouTube</a>. Sinon, la suite se lit ici.</p>
   </div>
@@ -257,6 +262,20 @@
   burger.addEventListener('click', () => nav.classList.toggle('open'));
   const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Click-to-play: swap the poster for the YouTube iframe only when asked.
+  document.querySelectorAll('.video-embed .video-play').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const box = btn.closest('.video-embed');
+      const id = box.dataset.video;
+      const frame = document.createElement('iframe');
+      frame.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      frame.title = box.dataset.title || 'Video';
+      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      frame.allowFullscreen = true;
+      box.replaceChildren(frame);
+    });
+  });
 </script>
 </body>
 </html>
