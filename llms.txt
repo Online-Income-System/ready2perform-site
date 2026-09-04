@@ -24,6 +24,7 @@ The site is bilingual. English pages sit at the root, French pages under /fr/.
 
 ## Articles
 
+- [Tennis Fitness After 40: The Weekly Schedule, Day by Day](https://www.ready2perform.com/learn/tennis-fitness-40-plus-schedule): Benoit Foucher's companion piece to the seven principles article, turning them into an actual training week for players over forty. Monday and Friday build single-leg lower-body strength (Friday adds volume), Tuesday is core work with optional upper body, Wednesday is an easy jog, Thursday is a full rest day, Saturday is a deceleration-focused session built on a twenty-minute warm-up and a ten-seconds-work-to-sixty-or-more-seconds-rest ratio, and Sunday is tennis and mobility only. Includes the "dance method" for structuring sets, exact sets and reps for each exercise, and the reasoning behind the rest days. French version at /fr/apprendre/programme-fitness-tennis-40-ans.
 - [Tennis Fitness After 40: Seven Principles, Not a Copied Programme](https://www.ready2perform.com/learn/tennis-fitness-40-plus): Benoit Foucher's seven categories for organising physical training for tennis players over forty, taught as principles rather than a fixed programme so each player can select their own exercises. Covers injury prevention first (releasing tension at your mobile point, daily range-of-motion work), single-leg lower-body strength and why tennis transfers from one-legged work, deceleration and the concept of "leakage", anti-rotation core work, plyometrics and minimising ground contact, endurance built from one weekly zone-two session plus optional intervals at ten seconds on and fifty seconds off, and optional upper-body and grip work. French version at /fr/apprendre/fitness-tennis-40-ans.
 
 ## Topics covered
@@ -34,6 +35,7 @@ The site is bilingual. English pages sit at the root, French pages under /fr/.
 - Match strategy and simple game plans that hold under pressure
 - Self-talk in tennis and the levels it moves through under stress
 - Tennis fitness for players 40 and over — injury prevention, single-leg strength, deceleration, core, plyometrics and endurance
+- A full weekly tennis fitness schedule for players 40 and over, with sets, reps and rest days
 - Injury prevention and longevity for adult competitive players
 - Recovery as a trainable skill: load waving, the parasympathetic switch, heart-rate variability
 - Endurance for intermittent sport, and why generic running fitness does not transfer to court fitness
