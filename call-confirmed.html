@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>You're booked | Ready2Perform, Benoit Foucher</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<meta name="description" content="Your call with Benoit Foucher is confirmed." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=22" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><img src="images/logo.svg" alt="Ready2Perform" style="height:46px;width:auto;display:block" /></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn/index.html">Learn</a></li>
+        <li><a href="yournaturaltennis.html">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="lang"><a class="on">EN</a><span class="sep">/</span><a href="fr/appel-confirme.html">FR</a></span>
+      <button class="burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="min-height:auto;padding-bottom:0">
+  <div class="wrap measure center">
+    <p class="eyebrow">You're booked</p>
+    <h1>You're on Benoit's calendar.</h1>
+    <p class="lead" id="confirm-line">Check your inbox, the details and the calendar invite are on their way.</p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--soft)">
+  <div class="wrap measure prose reveal">
+    <p class="eyebrow">Before we talk</p>
+    <h2>One thing to think about.</h2>
+    <p style="margin-top:1.4rem">This isn't a pitch. It's a real conversation about why your best tennis shows up in practice and goes missing the moment the score matters.</p>
+    <p>So before the call, think of one specific match where that happened to you. A match you should have won, against someone you know you can beat. That single match is usually enough for Benoit to start seeing the pattern.</p>
+    <p>If you have a short video of yourself playing, bring that too and you'll watch it together on the call. In the meantime, the <a href="learn/index.html" class="tlink">Learn articles</a> are a good place to start.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="Ready2Perform" style="height:46px;width:auto;display:block" /></a>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn/index.html">Learn</a></li>
+        <li><a href="yournaturaltennis.html">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.youtube.com/@benoitfoucher-ready2perform" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+    <div class="copy">
+      <span>&copy; 2026 Ready2Perform &middot; Benoit Foucher</span>
+      <span>Natural movement. Real victory.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================================================================
+     SYSTEME.IO BRIDGE
+     Invisible to the visitor. This is what puts the booker into
+     Systeme.io and starts the sequence.
+
+     It posts to the same kind of endpoint the ebook opt-ins on
+     yournaturaltennis.html and tontennisnaturel.html already use, so
+     there is nothing new or clever here, just the proven pattern with
+     the values zcal hands over in the redirect URL.
+
+     Form 44455830 is the "Call Booked Bridge" inline form, created
+     for this and nothing else. Deliberately NOT the ebook forms
+     (42142328 EN, 42142408 FR), since posting to those would fire the
+     ebook sequence and there would be no way to tell a call booking
+     apart from an ebook download.
+     =================================================================== -->
+<iframe name="r2p-sink" style="display:none" aria-hidden="true" title="empty"></iframe>
+<div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true">
+  <form id="r2p-bridge-form" method="post"
+        action="https://systeme.io/embedded/44455830/subscription"
+        target="r2p-sink">
+    <input type="text" name="first_name" id="r2p-first-name" autocomplete="off" />
+    <input type="email" name="email" id="r2p-email" autocomplete="off" />
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  const nav = document.getElementById('nav'), burger = document.getElementById('burger');
+  burger.addEventListener('click', () => nav.classList.toggle('open'));
+  const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var email = (params.get('email') || '').trim();
+  var fullName = (params.get('fullName') || '').trim();
+  var startDate = (params.get('startDate') || '').trim();
+  var firstName = fullName.split(/\s+/)[0] || '';
+
+  // If zcal redirected inside its own embedded booking widget, break out so
+  // the visitor gets the full page instead of this squeezed into the frame
+  // on /contact. Same origin, so this is allowed. If it throws we are
+  // cross-origin, which means we are not in our own frame, so carry on.
+  try {
+    if (window.self !== window.top) {
+      window.top.location.replace(window.location.href);
+      return;
+    }
+  } catch (e) { /* carry on rendering in place */ }
+
+  // Personalise the confirmation line when zcal gave us a time. Uses the
+  // timezone zcal reports for the invitee, falling back to the browser's.
+  if (startDate) {
+    var when = new Date(startDate);
+    if (!isNaN(when.getTime())) {
+      var opts = { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' };
+      var tz = (params.get('timezone') || '').trim();
+      if (tz) {
+        try { new Intl.DateTimeFormat(undefined, { timeZone: tz }); opts.timeZone = tz; }
+        catch (e) { /* unrecognised zone, fall back to local */ }
+      }
+      var nice = when.toLocaleString(undefined, opts);
+      var zone = opts.timeZone || Intl.DateTimeFormat().resolvedOptions().timeZone;
+      var line = document.getElementById('confirm-line');
+      if (line) {
+        line.textContent = (firstName ? firstName + ', your' : 'Your') +
+          ' call is set for ' + nice + ' (' + zone +
+          '). Check your inbox, the details and the calendar invite are on their way.';
+      }
+    }
+  }
+
+  if (!email) return; // Nothing to send. The page still reads fine.
+
+  var form = document.getElementById('r2p-bridge-form');
+  if (!form || form.action.indexOf('FORM_ID') !== -1) {
+    console.warn('r2p bridge: form id not set yet, nothing sent to Systeme.io');
+    return;
+  }
+
+  // Submit once per booking, so a refresh cannot re-trigger the welcome email.
+  var guardKey = 'r2p-bridge-' + email + '-' + startDate;
+  try {
+    if (window.sessionStorage && sessionStorage.getItem(guardKey)) return;
+    if (window.sessionStorage) sessionStorage.setItem(guardKey, '1');
+  } catch (e) { /* private mode, accept the small duplicate risk */ }
+
+  document.getElementById('r2p-email').value = email;
+  document.getElementById('r2p-first-name').value = firstName;
+
+  // Preferred: fire the POST in the background so nothing on screen changes.
+  // Fallback: post into the hidden iframe, which works everywhere.
+  var sent = false;
+  try {
+    if (window.fetch) {
+      fetch(form.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ first_name: firstName, email: email }).toString()
+      }).catch(function () { if (!sent) form.submit(); });
+      sent = true;
+    }
+  } catch (e) { /* fall through */ }
+  if (!sent) form.submit();
+})();
+</script>
+</body>
+</html>
