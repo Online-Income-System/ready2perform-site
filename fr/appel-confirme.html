@@ -79,15 +79,13 @@
      SYSTEME.IO BRIDGE (FRENCH)
      Mirror of call-confirmed.html. Invisible to the visitor.
 
-     IMPORTANT: FORM_ID_FR below must be replaced with the ID of the new
-     French inline form in Systeme.io ("Call Booked Bridge FR"). Until it
-     is, the script below deliberately sends nothing and logs a warning,
-     so a French booker still gets a clean confirmation page and no half
-     broken POST.
+     Form 44922559 is the "Call Booked Bridge FR" inline form, created
+     for this and nothing else.
 
-     The French form must assign the tag "Français". It must NOT assign
-     "Call Booked", or the English rule fires and the booker gets the
-     English sequence as well as the French one.
+     That form must assign the tag "Call Booked FR", which is used by
+     nothing else in the account. It must NOT assign "Call Booked" (the
+     English rule fires on that) and it must NOT assign "Francais" (the
+     ebook opt-ins already use that tag, so it cannot be a trigger).
 
      Known IDs: 44455830 = Call Booked Bridge (EN).
                 42142328 = ebook EN. 42142408 = ebook FR. Not these.
@@ -95,7 +93,7 @@
 <iframe name="r2p-sink" style="display:none" aria-hidden="true" title="empty"></iframe>
 <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true">
   <form id="r2p-bridge-form" method="post"
-        action="https://systeme.io/embedded/FORM_ID_FR/subscription"
+        action="https://systeme.io/embedded/44922559/subscription"
         target="r2p-sink">
     <input type="text" name="first_name" id="r2p-first-name" autocomplete="off" />
     <input type="email" name="email" id="r2p-email" autocomplete="off" />
