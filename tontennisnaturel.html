@@ -49,7 +49,7 @@
         <form class="optin" method="post" action="https://systeme.io/embedded/42142408/subscription">
           <input type="text" name="first_name" placeholder="Prénom" required />
           <input type="email" name="email" placeholder="Adresse email" required />
-          <button type="submit" class="btn">Envoie-moi l'ebook gratuit</button>
+          <button type="submit" class="btn" data-sending="Envoi en cours...">Envoie-moi l'ebook gratuit</button>
           <p class="optin-note">Gratuit. Directement dans ta boîte mail.</p>
         </form>
       </div>
@@ -213,7 +213,7 @@
     <form class="optin" method="post" action="https://systeme.io/embedded/42142408/subscription" style="margin:2rem auto 0">
       <input type="text" name="first_name" placeholder="Prénom" required />
       <input type="email" name="email" placeholder="Adresse email" required />
-      <button type="submit" class="btn">Envoie-moi l'ebook gratuit</button>
+      <button type="submit" class="btn" data-sending="Envoi en cours...">Envoie-moi l'ebook gratuit</button>
       <p class="optin-note">Gratuit. Directement dans ta boîte mail.</p>
     </form>
   </div>
@@ -258,6 +258,32 @@
   burger.addEventListener('click', () => nav.classList.toggle('open'));
   const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+<!-- ===================================================================
+     EBOOK OPT-IN REDIRECT
+     The forms still post to the same Systeme.io inline forms as before,
+     so the contact, tags and emails in Systeme.io are unchanged. The only
+     difference: the post goes into a hidden frame, and the visitor is then
+     sent to our own thank-you page (fr/livre-envoye.html) instead of Systeme.io's
+     "thank you page was not defined" screen.
+     Without JavaScript the forms simply post the old way.
+     =================================================================== -->
+<iframe name="r2p-optin-sink" style="display:none" aria-hidden="true" title="empty"></iframe>
+<script>
+(function () {
+  var sink = document.querySelector('iframe[name="r2p-optin-sink"]');
+  var done = false;
+  function go() { if (done) return; done = true; window.location.href = 'fr/livre-envoye.html'; }
+  document.querySelectorAll('form.optin').forEach(function (form) {
+    form.setAttribute('target', 'r2p-optin-sink');
+    form.addEventListener('submit', function () {
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.textContent = btn.dataset.sending || btn.textContent; }
+      sink.addEventListener('load', function () { setTimeout(go, 300); }, { once: true });
+      setTimeout(go, 6000); // safety net if the frame never reports back
+    });
+  });
+})();
 </script>
 </body>
 </html>

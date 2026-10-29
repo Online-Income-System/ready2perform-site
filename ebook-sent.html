@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your book is on its way | Ready2Perform, Benoit Foucher</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<meta name="description" content="Your free copy of Your Natural Tennis is on its way." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=22" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><img src="images/logo.svg" alt="Ready2Perform" style="height:46px;width:auto;display:block" /></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn/index.html">Learn</a></li>
+        <li><a href="yournaturaltennis.html">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="lang"><a class="on">EN</a><span class="sep">/</span><a href="fr/livre-envoye.html">FR</a></span>
+      <button class="burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="min-height:auto;padding-bottom:clamp(36px,5vw,64px)">
+  <div class="wrap measure center">
+    <p class="eyebrow">Your book is on its way</p>
+    <h1>Check your inbox.</h1>
+    <p class="lead">Your Natural Tennis is on its way to you now. It should land in the next few minutes.</p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--soft)">
+  <div class="wrap measure prose reveal">
+    <p class="eyebrow">Can't find it?</p>
+    <h2>Look in these places.</h2>
+    <p style="margin-top:1.4rem">Check your spam folder. If you use Gmail, check the Promotions tab too. Or search your inbox for "Benoit".</p>
+    <p>When you find it, move it to your main inbox. Then my next emails won't get lost.</p>
+    <p>Still nothing after ten minutes? Email me at <a href="mailto:benoit@ready2perform.com" class="tlink">benoit@ready2perform.com</a> and I will send it to you myself.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap measure prose reveal">
+    <p class="eyebrow">While you wait</p>
+    <h2>Read my latest article.</h2>
+    <p style="margin-top:1.4rem"><a href="learn/tennis-movement-profile.html" class="tlink">Why your tennis changes under pressure, and why one technique can't fit everyone.</a> It goes well with the book.</p>
+    <p>Or see all the <a href="learn/index.html" class="tlink">Learn articles</a>.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <a href="index.html" class="brand"><img src="images/logo.svg" alt="Ready2Perform" style="height:46px;width:auto;display:block" /></a>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn/index.html">Learn</a></li>
+        <li><a href="yournaturaltennis.html">Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.youtube.com/@benoitfoucher-ready2perform" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+    <div class="copy">
+      <span>&copy; 2026 Ready2Perform &middot; Benoit Foucher</span>
+      <span>Natural movement. Real victory.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav'), burger = document.getElementById('burger');
+  burger.addEventListener('click', () => nav.classList.toggle('open'));
+  const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

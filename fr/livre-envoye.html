@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ton livre arrive | Ready2Perform, Benoit Foucher</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+<meta name="description" content="Ton exemplaire gratuit de Ton Tennis Naturel est en route." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css?v=22" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><img src="../images/logo.svg" alt="Ready2Perform" style="height:46px;width:auto;display:block" /></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="apprendre/index.html">Apprendre</a></li>
+        <li><a href="../tontennisnaturel.html">Livre</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="lang"><a href="../ebook-sent.html">EN</a><span class="sep">/</span><a class="on">FR</a></span>
+      <button class="burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="min-height:auto;padding-bottom:clamp(36px,5vw,64px)">
+  <div class="wrap measure center">
+    <p class="eyebrow">Ton livre arrive</p>
+    <h1>Regarde ta boîte mail.</h1>
+    <p class="lead">Ton Tennis Naturel est en route. Il devrait arriver dans les prochaines minutes.</p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--soft)">
+  <div class="wrap measure prose reveal">
+    <p class="eyebrow">Tu ne le trouves pas ?</p>
+    <h2>Regarde à ces endroits.</h2>
+    <p style="margin-top:1.4rem">Regarde dans tes spams. Si tu utilises Gmail, regarde aussi l'onglet Promotions. Ou cherche « Benoit » dans ta boîte mail.</p>
+    <p>Quand tu le trouves, déplace-le dans ta boîte principale. Comme ça, mes prochains emails ne se perdront pas.</p>
+    <p>Toujours rien après dix minutes ? Écris-moi à <a href="mailto:benoit@ready2perform.com" class="tlink">benoit@ready2perform.com</a> et je te l'envoie moi-même.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap measure prose reveal">
+    <p class="eyebrow">En attendant</p>
+    <h2>Lis mon dernier article.</h2>
+    <p style="margin-top:1.4rem"><a href="apprendre/profil-moteur-tennis.html" class="tlink">Pourquoi ton tennis change sous la pression, et pourquoi une seule technique ne convient pas à tout le monde.</a> Il va bien avec le livre.</p>
+    <p>Ou découvre tous les <a href="apprendre/index.html" class="tlink">articles Apprendre</a>.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <a href="index.html" class="brand"><img src="../images/logo.svg" alt="Ready2Perform" style="height:46px;width:auto;display:block" /></a>
+      <ul class="footer-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="apprendre/index.html">Apprendre</a></li>
+        <li><a href="../tontennisnaturel.html">Livre</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.youtube.com/@benoitfoucher-ready2perform" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+    <div class="copy">
+      <span>© 2026 Ready2Perform · Benoit Foucher</span>
+      <span>Mouvement naturel. Vraie victoire.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav'), burger = document.getElementById('burger');
+  burger.addEventListener('click', () => nav.classList.toggle('open'));
+  const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
